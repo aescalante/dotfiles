@@ -1,4 +1,4 @@
-alias git=hub
+
 alias reload='. ~/.bashrc'
 alias ea="$EDITOR ~/bin/dotfiles/bash/aliases && reload"
 alias ee="$EDITOR ~/bin/dotfiles/bash/env && reload"
@@ -51,11 +51,11 @@ alias glo='git log --oneline'
 alias gc='git commit -v'
 alias gca='git commit -v -a'
 alias gcam='git commit --amend'
-alias gd='git diff'
+alias d='git diff'
 alias gp='git pull'
 alias gpr='git pull --rebase'
 alias gpu='git push'
-alias gst='git status'
+alias s='git status'
 alias gss='git stash save'
 alias gsa='git stash apply'
 alias gsp='git stash pop'
