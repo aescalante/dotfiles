@@ -29,6 +29,12 @@ bash_prompt() {
   [ $UID -eq "0" ] && UC=$R   # root's color
 
   PS1="\A $W$R\w $Y\$(__git_branch)$R\$(__git_dirty)${NONE}$ "
+  case $HOSTNAME in
+       (ThinkPad*) PS1="\A $W$Y${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u $@$R\h\[\033[00m\] \w $Y\$(__git_branch)$R\$(__git_dirty)${NONE}$ ";;
+       (lxplus*) PS1="\A $W$Y${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u $@$B\h\[\033[00m\] \w $Y\$(__git_branch)$R\$(__git_dirty)${NONE}$ ";;
+       (*cbe.vbc.ac*) PS1="\A $W$Y${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u $@$C\h\[\033[00m\] \w $Y\$(__git_branch)$R\$(__git_dirty)${NONE}$ ";;
+esac
+
 }
 
 bash_prompt
